@@ -21,7 +21,9 @@ int main(int argc, const char * argv[])
         obj.itemName = @"Macbook Pro";
         obj.valueInDollars = 1200;
         
-        NSLog(@"Item name%@ : ",obj.itemName);
+        //when an object is NSLogged, it's description method is called(if implemented)
+        //if not implemented thne the superclass method is called
+        NSLog(@"%@",obj);
     }
     return 0;
 }
