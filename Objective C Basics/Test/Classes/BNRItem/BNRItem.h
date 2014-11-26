@@ -16,6 +16,10 @@
     int _valueInDollars;
     
 }
+
++(instancetype)randomItem;
+
+#pragma mark Initializers
 //Designated Initializer
 -(instancetype)initWithItemName :(NSString*) name
                  valueInDollars :(int) value
@@ -23,7 +27,11 @@
 
 -(instancetype)initWithItemName :(NSString *)name;
 
+-(instancetype)initWithItemName :(NSString *)name
+                    serialNumber:(NSString *)serialNumber;
 
+
+#pragma mark Getters and Setters
 -(void)setItemName:(NSString *)str;
 -(NSString*)itemName;
 

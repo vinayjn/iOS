@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "BNRItem.h"
+#import "BNRContainer.h"
 
 int main(int argc, const char * argv[])
 {
@@ -43,6 +44,24 @@ int main(int argc, const char * argv[])
         //using default initializer
         BNRItem *itemWithDefault = [[BNRItem alloc] init];
         NSLog(@"%@",itemWithDefault);
+        
+        //RandomItems
+        
+        NSMutableArray *items = [[NSMutableArray alloc] init];
+        
+        for (int i = 0; i < 10; i++) {
+            BNRItem *item = [BNRItem randomItem];
+            [items addObject:item];
+        }
+        for (BNRItem *item in items) {
+            NSLog(@"%@", item);
+        }
+        
+        
+        BNRContainer *container = [[BNRContainer alloc] initWithContainerName:@"Main" items:items valueInDollars:45];
+        
+        NSLog(@"%@",container);
+        
         
     }
     return 0;

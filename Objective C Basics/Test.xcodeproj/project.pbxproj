@@ -10,7 +10,8 @@
 		010F97B31A24AEEC00D240EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 010F97B21A24AEEC00D240EC /* Foundation.framework */; };
 		010F97B61A24AEEC00D240EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 010F97B51A24AEEC00D240EC /* main.m */; };
 		010F97BA1A24AEEC00D240EC /* Test.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 010F97B91A24AEEC00D240EC /* Test.1 */; };
-		010F97C21A24AF2000D240EC /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 010F97C11A24AF2000D240EC /* BNRItem.m */; };
+		01F23BC81A25CD1600CFBD1B /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F23BC71A25CD1600CFBD1B /* BNRItem.m */; };
+		01F23BCC1A25CD5100CFBD1B /* BNRContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 01F23BCB1A25CD5100CFBD1B /* BNRContainer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,8 +33,10 @@
 		010F97B51A24AEEC00D240EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		010F97B81A24AEEC00D240EC /* Test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Test-Prefix.pch"; sourceTree = "<group>"; };
 		010F97B91A24AEEC00D240EC /* Test.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Test.1; sourceTree = "<group>"; };
-		010F97C01A24AF2000D240EC /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
-		010F97C11A24AF2000D240EC /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
+		01F23BC61A25CD1600CFBD1B /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
+		01F23BC71A25CD1600CFBD1B /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
+		01F23BCA1A25CD5100CFBD1B /* BNRContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRContainer.h; sourceTree = "<group>"; };
+		01F23BCB1A25CD5100CFBD1B /* BNRContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRContainer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +54,6 @@
 		010F97A61A24AEEC00D240EC = {
 			isa = PBXGroup;
 			children = (
-				010F97C01A24AF2000D240EC /* BNRItem.h */,
-				010F97C11A24AF2000D240EC /* BNRItem.m */,
 				010F97B41A24AEEC00D240EC /* Test */,
 				010F97B11A24AEEC00D240EC /* Frameworks */,
 				010F97B01A24AEEC00D240EC /* Products */,
@@ -78,6 +79,7 @@
 		010F97B41A24AEEC00D240EC /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				01F23BC41A25CD1600CFBD1B /* Classes */,
 				010F97B51A24AEEC00D240EC /* main.m */,
 				010F97B91A24AEEC00D240EC /* Test.1 */,
 				010F97B71A24AEEC00D240EC /* Supporting Files */,
@@ -91,6 +93,33 @@
 				010F97B81A24AEEC00D240EC /* Test-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01F23BC41A25CD1600CFBD1B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				01F23BC91A25CD5100CFBD1B /* BNRContainer */,
+				01F23BC51A25CD1600CFBD1B /* BNRItem */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		01F23BC51A25CD1600CFBD1B /* BNRItem */ = {
+			isa = PBXGroup;
+			children = (
+				01F23BC61A25CD1600CFBD1B /* BNRItem.h */,
+				01F23BC71A25CD1600CFBD1B /* BNRItem.m */,
+			);
+			path = BNRItem;
+			sourceTree = "<group>";
+		};
+		01F23BC91A25CD5100CFBD1B /* BNRContainer */ = {
+			isa = PBXGroup;
+			children = (
+				01F23BCA1A25CD5100CFBD1B /* BNRContainer.h */,
+				01F23BCB1A25CD5100CFBD1B /* BNRContainer.m */,
+			);
+			path = BNRContainer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				010F97B61A24AEEC00D240EC /* main.m in Sources */,
-				010F97C21A24AF2000D240EC /* BNRItem.m in Sources */,
+				01F23BC81A25CD1600CFBD1B /* BNRItem.m in Sources */,
+				01F23BCC1A25CD5100CFBD1B /* BNRContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
