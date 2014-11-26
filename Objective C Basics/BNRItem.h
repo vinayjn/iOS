@@ -16,6 +16,13 @@
     int _valueInDollars;
     
 }
+//Designated Initializer
+-(instancetype)initWithItemName :(NSString*) name
+                 valueInDollars :(int) value
+                   serialNumber :(NSString *)serialNumber;
+
+-(instancetype)initWithItemName :(NSString *)name;
+
 
 -(void)setItemName:(NSString *)str;
 -(NSString*)itemName;
