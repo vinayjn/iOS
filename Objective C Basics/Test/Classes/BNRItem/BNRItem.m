@@ -113,15 +113,16 @@
     return _valueInDollars;
 }
 
-
-
-
 //description method is overrided so as to NSLog the object
 -(NSString *)description{
     
     NSString *descriptionString = [[NSString alloc]initWithFormat:@"\nFollowing are the details of item : \nName : %@\nSerial Number : %@\nValue($) : %d",self.itemName,self.serialNumber,self.valueInDollars ];
     
     return descriptionString;
+}
+
+-(void)dealloc{
+    NSLog(@"\nDestroyed : %@",self);
 }
 
 @end

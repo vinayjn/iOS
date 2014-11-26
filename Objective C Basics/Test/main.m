@@ -58,10 +58,12 @@ int main(int argc, const char * argv[])
         }
         
         
-        BNRContainer *container = [[BNRContainer alloc] initWithContainerName:@"Main" items:items valueInDollars:45];
+//        BNRContainer *container = [[BNRContainer alloc] initWithContainerName:@"Main" items:items valueInDollars:45];
+//        
+//        NSLog(@"%@",container);
         
-        NSLog(@"%@",container);
-        
+        NSLog(@"Setting objects to nil : ");
+        items = nil;
         
     }
     return 0;
