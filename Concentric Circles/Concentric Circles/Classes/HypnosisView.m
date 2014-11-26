@@ -48,6 +48,9 @@
     path.lineWidth = 10.0;
     // Draw the line!
     [path stroke];
+    
+    UIImage *logo= [UIImage imageNamed:@"logo.png"];
+    [logo drawInRect:self.frame];
 }
 
 

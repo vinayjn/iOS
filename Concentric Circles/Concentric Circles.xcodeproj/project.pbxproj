@@ -13,6 +13,7 @@
 		018065C51A26545100D78FE6 /* Concentric_CirclesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 018065C41A26545100D78FE6 /* Concentric_CirclesTests.m */; };
 		018065CF1A2654A200D78FE6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 018065CE1A2654A200D78FE6 /* Default-568h@2x.png */; };
 		018065D71A2656B800D78FE6 /* HypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = 018065D61A2656B800D78FE6 /* HypnosisView.m */; };
+		018065DA1A2672D900D78FE6 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 018065D91A2672D900D78FE6 /* logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		018065CE1A2654A200D78FE6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		018065D51A2656B800D78FE6 /* HypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnosisView.h; sourceTree = "<group>"; };
 		018065D61A2656B800D78FE6 /* HypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnosisView.m; sourceTree = "<group>"; };
+		018065D91A2672D900D78FE6 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		018065A71A26545100D78FE6 /* Concentric Circles */ = {
 			isa = PBXGroup;
 			children = (
+				018065D81A2672D900D78FE6 /* Images */,
 				018065D41A26569A00D78FE6 /* Classes */,
 				018065AC1A26545100D78FE6 /* AppDelegate.h */,
 				018065AD1A26545100D78FE6 /* AppDelegate.m */,
@@ -122,6 +125,14 @@
 				018065D61A2656B800D78FE6 /* HypnosisView.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		018065D81A2672D900D78FE6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				018065D91A2672D900D78FE6 /* logo.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +217,7 @@
 			files = (
 				018065B61A26545100D78FE6 /* Images.xcassets in Resources */,
 				018065CF1A2654A200D78FE6 /* Default-568h@2x.png in Resources */,
+				018065DA1A2672D900D78FE6 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +409,7 @@
 				018065CA1A26545100D78FE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		018065CB1A26545100D78FE6 /* Build configuration list for PBXNativeTarget "Concentric CirclesTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +418,7 @@
 				018065CD1A26545100D78FE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
