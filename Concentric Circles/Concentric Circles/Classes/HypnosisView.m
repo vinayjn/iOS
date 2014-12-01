@@ -8,8 +8,11 @@
 
 #import "HypnosisView.h"
 
-@implementation HypnosisView
+@interface HypnosisView ()
+@property (strong,nonatomic) UIColor *circleColor;
+@end
 
+@implementation HypnosisView
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -19,6 +22,7 @@
     if (self) {
         // All BNRHypnosisViews start with a clear background color
         self.backgroundColor = [UIColor clearColor];
+        self.circleColor = [UIColor lightGrayColor];
     }
     return self;
 }
@@ -33,7 +37,7 @@
     
     
     UIBezierPath *path = [[UIBezierPath alloc] init];
-    [[UIColor lightGrayColor] setStroke];
+    [self.circleColor setStroke];
     float maxRadius = (hypotf(bounds.size.width, bounds.size.height))/2.0;
     for (float currentRadius = maxRadius; currentRadius > 0; currentRadius -= 20) {
         [path moveToPoint:CGPointMake(center.x+currentRadius, center.y)];
@@ -48,10 +52,23 @@
     path.lineWidth = 10.0;
     // Draw the line!
     [path stroke];
-    
-    UIImage *logo= [UIImage imageNamed:@"logo.png"];
-    [logo drawInRect:self.frame];
+
 }
-
-
+- (void)setCircleColor:(UIColor *)circleColor
+{
+    _circleColor = circleColor;
+    [self setNeedsDisplay];
+}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    float red = (arc4random() % 100) / 100.0;
+    float green = (arc4random() % 100) / 100.0;
+    float blue = (arc4random() % 100) / 100.0;
+    
+    UIColor *randomColor = [UIColor colorWithRed:red
+                                           green:green
+                                            blue:blue
+                                           alpha:1];
+    [self setCircleColor:randomColor];
+}
 @end
