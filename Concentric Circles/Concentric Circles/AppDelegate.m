@@ -22,8 +22,18 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     CGRect firstFrame = self.window.bounds;
-    HypnosisView *hyView = [[HypnosisView alloc] initWithFrame:firstFrame];
-    [self.window addSubview:hyView];
+    
+    CGRect bigFrame = firstFrame;
+    bigFrame.size.width *= 2.0;
+    bigFrame.size.height *= 2.0;
+    
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:firstFrame];
+    [self.window addSubview:scrollView];
+    
+    HypnosisView *hyView = [[HypnosisView alloc] initWithFrame:bigFrame];
+    
+    [scrollView addSubview:hyView];
+    scrollView.contentSize = bigFrame.size;
     [self.window makeKeyAndVisible];
     
     return YES;
