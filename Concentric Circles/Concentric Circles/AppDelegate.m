@@ -23,16 +23,23 @@
     
     CGRect firstFrame = self.window.bounds;
     
+//    CGRect bigFrame = firstFrame;
+//    bigFrame.size.width *= 2.0;
+//    bigFrame.size.height *= 2.0;
+    
+    //panning of two views coded :
     CGRect bigFrame = firstFrame;
     bigFrame.size.width *= 2.0;
-    bigFrame.size.height *= 2.0;
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:firstFrame];
     [self.window addSubview:scrollView];
     
-    HypnosisView *hyView = [[HypnosisView alloc] initWithFrame:bigFrame];
-    
-    [scrollView addSubview:hyView];
+    HypnosisView *hyViewOne = [[HypnosisView alloc] initWithFrame:firstFrame];
+    [scrollView addSubview:hyViewOne];
+    firstFrame.origin.x = hyViewOne.frame.size.width;
+    HypnosisView *hyViewTwo = [[HypnosisView alloc] initWithFrame:firstFrame];
+    [scrollView addSubview:hyViewTwo];
+    scrollView.pagingEnabled = YES;
     scrollView.contentSize = bigFrame.size;
     [self.window makeKeyAndVisible];
     
