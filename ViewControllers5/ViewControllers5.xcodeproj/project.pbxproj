@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		016165921A2F08D7001597A1 /* HypnoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016165911A2F08D7001597A1 /* HypnoViewController.m */; };
+		016165941A2F0D6E001597A1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 016165931A2F0D6E001597A1 /* Default-568h@2x.png */; };
+		016165971A2F144C001597A1 /* ReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016165961A2F144C001597A1 /* ReminderViewController.m */; };
 		01B051A61A2E4C0D000C8240 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B051A51A2E4C0D000C8240 /* main.m */; };
 		01B051A91A2E4C0D000C8240 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B051A81A2E4C0D000C8240 /* AppDelegate.m */; };
 		01B051B11A2E4C0E000C8240 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B051B01A2E4C0E000C8240 /* Images.xcassets */; };
@@ -25,6 +28,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		016165901A2F08D7001597A1 /* HypnoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HypnoViewController.h; sourceTree = "<group>"; };
+		016165911A2F08D7001597A1 /* HypnoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HypnoViewController.m; sourceTree = "<group>"; };
+		016165931A2F0D6E001597A1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		016165951A2F144C001597A1 /* ReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderViewController.h; sourceTree = "<group>"; };
+		016165961A2F144C001597A1 /* ReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderViewController.m; sourceTree = "<group>"; };
 		01B051A01A2E4C0D000C8240 /* ViewControllers5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewControllers5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B051A41A2E4C0D000C8240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01B051A51A2E4C0D000C8240 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,6 +67,7 @@
 		01B051971A2E4C0D000C8240 = {
 			isa = PBXGroup;
 			children = (
+				016165931A2F0D6E001597A1 /* Default-568h@2x.png */,
 				01B051A21A2E4C0D000C8240 /* ViewControllers5 */,
 				01B051BC1A2E4C0E000C8240 /* ViewControllers5Tests */,
 				01B051A11A2E4C0D000C8240 /* Products */,
@@ -133,6 +142,10 @@
 		01B051CD1A2E4D07000C8240 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				016165901A2F08D7001597A1 /* HypnoViewController.h */,
+				016165911A2F08D7001597A1 /* HypnoViewController.m */,
+				016165951A2F144C001597A1 /* ReminderViewController.h */,
+				016165961A2F144C001597A1 /* ReminderViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -218,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01B051B11A2E4C0E000C8240 /* Images.xcassets in Resources */,
+				016165941A2F0D6E001597A1 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,8 +250,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				01B051A91A2E4C0D000C8240 /* AppDelegate.m in Sources */,
+				016165921A2F08D7001597A1 /* HypnoViewController.m in Sources */,
 				01B051A61A2E4C0D000C8240 /* main.m in Sources */,
 				01B051CE1A2E4D07000C8240 /* HypnosisView.m in Sources */,
+				016165971A2F144C001597A1 /* ReminderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +427,7 @@
 				01B051C51A2E4C0E000C8240 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01B051C61A2E4C0E000C8240 /* Build configuration list for PBXNativeTarget "ViewControllers5Tests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +436,7 @@
 				01B051C81A2E4C0E000C8240 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
