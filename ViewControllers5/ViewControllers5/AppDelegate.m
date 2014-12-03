@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HypnoViewController.h"
+#import "ReminderViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,10 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     HypnoViewController *hypnoViewController = [[HypnoViewController alloc]init];
-    [self.window setRootViewController:hypnoViewController];
+    
+    ReminderViewController *reminderViewController = [[ReminderViewController alloc]initWithNibName:@"ReminderViewController" bundle:[NSBundle mainBundle]];
+    
+    [self.window setRootViewController:reminderViewController];
     [self.window makeKeyAndVisible];
     return YES;
 }

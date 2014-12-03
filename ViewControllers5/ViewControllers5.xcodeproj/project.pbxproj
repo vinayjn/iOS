@@ -10,6 +10,7 @@
 		016165921A2F08D7001597A1 /* HypnoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016165911A2F08D7001597A1 /* HypnoViewController.m */; };
 		016165941A2F0D6E001597A1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 016165931A2F0D6E001597A1 /* Default-568h@2x.png */; };
 		016165971A2F144C001597A1 /* ReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 016165961A2F144C001597A1 /* ReminderViewController.m */; };
+		016165991A2F16F8001597A1 /* ReminderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 016165981A2F16F8001597A1 /* ReminderViewController.xib */; };
 		01B051A61A2E4C0D000C8240 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B051A51A2E4C0D000C8240 /* main.m */; };
 		01B051A91A2E4C0D000C8240 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 01B051A81A2E4C0D000C8240 /* AppDelegate.m */; };
 		01B051B11A2E4C0E000C8240 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01B051B01A2E4C0E000C8240 /* Images.xcassets */; };
@@ -33,6 +34,7 @@
 		016165931A2F0D6E001597A1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		016165951A2F144C001597A1 /* ReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReminderViewController.h; sourceTree = "<group>"; };
 		016165961A2F144C001597A1 /* ReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReminderViewController.m; sourceTree = "<group>"; };
+		016165981A2F16F8001597A1 /* ReminderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReminderViewController.xib; sourceTree = "<group>"; };
 		01B051A01A2E4C0D000C8240 /* ViewControllers5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewControllers5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B051A41A2E4C0D000C8240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01B051A51A2E4C0D000C8240 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				016165911A2F08D7001597A1 /* HypnoViewController.m */,
 				016165951A2F144C001597A1 /* ReminderViewController.h */,
 				016165961A2F144C001597A1 /* ReminderViewController.m */,
+				016165981A2F16F8001597A1 /* ReminderViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01B051B11A2E4C0E000C8240 /* Images.xcassets in Resources */,
+				016165991A2F16F8001597A1 /* ReminderViewController.xib in Resources */,
 				016165941A2F0D6E001597A1 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
