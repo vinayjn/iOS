@@ -16,9 +16,26 @@
 
 @implementation ReminderViewController
 
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if(self){
+        self.tabBarItem.title = @"Remind Me";
+        UIImage *hypno = [UIImage imageNamed:@"Time.png"];
+        self.tabBarItem.image = hypno;
+        
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    self.datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:60];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,7 +47,15 @@
     
     NSDate *date = self.datePicker.date;
     NSLog(@"%@",date);
+    
+    UILocalNotification *note = [[UILocalNotification alloc] init];
+    note.alertBody = @"Hypnotize Me!";
+    note.applicationIconBadgeNumber = 5;
+    note.fireDate = date;
+    note.soundName = UILocalNotificationDefaultSoundName;
+    [[UIApplication sharedApplication] scheduleLocalNotification:note];
 }
+
 /*
 #pragma mark - Navigation
 
