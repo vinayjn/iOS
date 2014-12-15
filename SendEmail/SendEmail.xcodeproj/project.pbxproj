@@ -12,8 +12,8 @@
 		01BF895C1A3F645300BC1A90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BF895B1A3F645300BC1A90 /* ViewController.m */; };
 		01BF895F1A3F645300BC1A90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BF895D1A3F645300BC1A90 /* Main.storyboard */; };
 		01BF89611A3F645300BC1A90 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BF89601A3F645300BC1A90 /* Images.xcassets */; };
-		01BF89641A3F645300BC1A90 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01BF89621A3F645300BC1A90 /* LaunchScreen.xib */; };
 		01BF89701A3F645300BC1A90 /* SendEmailTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01BF896F1A3F645300BC1A90 /* SendEmailTests.m */; };
+		01BF897A1A3F692D00BC1A90 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01BF89791A3F692D00BC1A90 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +36,10 @@
 		01BF895B1A3F645300BC1A90 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		01BF895E1A3F645300BC1A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01BF89601A3F645300BC1A90 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		01BF89631A3F645300BC1A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		01BF89691A3F645300BC1A90 /* SendEmailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendEmailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BF896E1A3F645300BC1A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01BF896F1A3F645300BC1A90 /* SendEmailTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendEmailTests.m; sourceTree = "<group>"; };
+		01BF89791A3F692D00BC1A90 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BF897A1A3F692D00BC1A90 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +64,7 @@
 		01BF89471A3F645200BC1A90 = {
 			isa = PBXGroup;
 			children = (
+				01BF89791A3F692D00BC1A90 /* MessageUI.framework */,
 				01BF89521A3F645300BC1A90 /* SendEmail */,
 				01BF896C1A3F645300BC1A90 /* SendEmailTests */,
 				01BF89511A3F645300BC1A90 /* Products */,
@@ -87,7 +89,6 @@
 				01BF895B1A3F645300BC1A90 /* ViewController.m */,
 				01BF895D1A3F645300BC1A90 /* Main.storyboard */,
 				01BF89601A3F645300BC1A90 /* Images.xcassets */,
-				01BF89621A3F645300BC1A90 /* LaunchScreen.xib */,
 				01BF89531A3F645300BC1A90 /* Supporting Files */,
 			);
 			path = SendEmail;
@@ -200,7 +201,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				01BF895F1A3F645300BC1A90 /* Main.storyboard in Resources */,
-				01BF89641A3F645300BC1A90 /* LaunchScreen.xib in Resources */,
 				01BF89611A3F645300BC1A90 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,14 +250,6 @@
 				01BF895E1A3F645300BC1A90 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		01BF89621A3F645300BC1A90 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01BF89631A3F645300BC1A90 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
