@@ -22,10 +22,17 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     HypnoViewController *hypnoViewController = [[HypnoViewController alloc]init];
+//    ReminderViewController *reminderViewController = [[ReminderViewController alloc]initWithNibName:@"ReminderViewController" bundle:[NSBundle mainBundle]];
+    ReminderViewController *reminderViewController = [[ReminderViewController alloc]init];
+    UITabBarController *tabBar = [[UITabBarController alloc]init];
+    tabBar.viewControllers = @[hypnoViewController,reminderViewController];
+    [self.window setRootViewController:tabBar];
     
-    ReminderViewController *reminderViewController = [[ReminderViewController alloc]initWithNibName:@"ReminderViewController" bundle:[NSBundle mainBundle]];
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+    }
+
     
-    [self.window setRootViewController:reminderViewController];
     [self.window makeKeyAndVisible];
     return YES;
 }
