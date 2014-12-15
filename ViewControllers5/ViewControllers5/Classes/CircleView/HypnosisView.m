@@ -28,7 +28,7 @@
 }
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    CGRect bounds = self.bounds;
+    CGRect bounds = self.window.bounds;
     
     //Center of the circle
     CGPoint center;
