@@ -10,6 +10,7 @@
 
 @interface ViewController (){
     
+    MFMailComposeViewController *mailComposer;
 }
 
 @end
@@ -27,7 +28,22 @@
 }
 - (IBAction)sendEmail:(id)sender {
     
+    mailComposer = [[MFMailComposeViewController alloc] init];
+    mailComposer.mailComposeDelegate = self;
+    [mailComposer setSubject:@"Test Message from iOS"];
+    [mailComposer setMessageBody:@"Hi, \nThis is a Test Message" isHTML:NO];
+    [self presentViewController:mailComposer animated:YES completion:nil];
     
 }
 
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    
+    if (result) {
+        NSLog(@"%u",result);
+    }
+    else if (error) {
+        NSLog(@"%@",error);
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
