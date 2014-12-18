@@ -9,11 +9,15 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+{
+    UIActivityIndicatorView *indicator;
+}
 @property (weak, nonatomic) IBOutlet UITextField *urlField;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *shortBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cpyBtn;
+
+
 
 @end
 
@@ -21,7 +25,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    _webView.delegate = self;
+    
+    indicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    indicator.center= CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2);
+    indicator.hidesWhenStopped = YES;
+    [self.view addSubview:indicator];
+    
 }
 #pragma mark IBActions
 - (IBAction)loadURL:(id)sender{
@@ -49,13 +59,14 @@
 -(void)webViewDidStartLoad:(UIWebView *)webView{
     
     _shortBtn.enabled = NO;
+    [indicator startAnimating];
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView{
     
     _shortBtn.enabled = YES;
     _urlField.text = webView.request.URL.absoluteString;
-    
+    [indicator stopAnimating];
 }
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
