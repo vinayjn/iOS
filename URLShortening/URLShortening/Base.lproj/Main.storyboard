@@ -16,58 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jy5-fE-q1W">
-                                <rect key="frame" x="0.0" y="560" width="600" height="40"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pQK-2u-Zpa">
-                                        <rect key="frame" x="76" y="5" width="448" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="laj-vc-5EC"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLg-Pz-haM">
-                                        <rect key="frame" x="532" y="5" width="60" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="Lkf-rO-eS1"/>
-                                            <constraint firstAttribute="height" constant="30" id="cj3-9d-Kc6"/>
-                                        </constraints>
-                                        <state key="normal" title="Copy">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="clickedCopy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="riq-rC-THa"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bo7-Ag-Wo4">
-                                        <rect key="frame" x="8" y="5" width="60" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="RsU-1k-aGh"/>
-                                            <constraint firstAttribute="width" constant="60" id="yU8-dz-hsE"/>
-                                        </constraints>
-                                        <state key="normal" title="Short">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="clickedShort:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2za-4Z-eLh"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="GLg-Pz-haM" secondAttribute="trailing" constant="8" id="47p-ff-9Me"/>
-                                    <constraint firstAttribute="height" constant="40" id="Aig-aa-QqU"/>
-                                    <constraint firstItem="bo7-Ag-Wo4" firstAttribute="top" secondItem="jy5-fE-q1W" secondAttribute="top" constant="5" id="Jh8-Fa-a7O"/>
-                                    <constraint firstItem="pQK-2u-Zpa" firstAttribute="top" secondItem="jy5-fE-q1W" secondAttribute="top" constant="5" id="XNL-jm-xXh"/>
-                                    <constraint firstItem="GLg-Pz-haM" firstAttribute="top" secondItem="jy5-fE-q1W" secondAttribute="top" constant="5" id="dQZ-Tv-o1s"/>
-                                    <constraint firstItem="bo7-Ag-Wo4" firstAttribute="leading" secondItem="jy5-fE-q1W" secondAttribute="leading" constant="8" id="lPc-4B-FHL"/>
-                                    <constraint firstItem="pQK-2u-Zpa" firstAttribute="leading" secondItem="bo7-Ag-Wo4" secondAttribute="trailing" constant="8" id="pVt-Zc-hxP"/>
-                                    <constraint firstItem="GLg-Pz-haM" firstAttribute="leading" secondItem="pQK-2u-Zpa" secondAttribute="trailing" constant="8" id="xgP-yy-nVM"/>
-                                </constraints>
-                            </view>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4fb-2L-PVT">
-                                <rect key="frame" x="0.0" y="44" width="600" height="516"/>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4fb-2L-PVT">
+                                <rect key="frame" x="0.0" y="44" width="600" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Eo-JB-Y3n">
@@ -83,29 +33,58 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" returnKeyType="go"/>
+                                            <connections>
+                                                <action selector="loadURL:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Au6-TA-rho"/>
+                                            </connections>
                                         </textField>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="qV6-kv-knF"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="qV6-kv-knF">
+                                            <connections>
+                                                <action selector="loadURL:" destination="BYZ-38-t0r" id="bPz-Ty-oEq"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ck6-Kw-XuD">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="iYI-q6-GhE"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem enabled="NO" systemItem="play" id="d1e-2u-hfG">
+                                        <connections>
+                                            <action selector="clickedShort:" destination="BYZ-38-t0r" id="utn-Qv-boV"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Tap Arrow Button To Shorten" id="1uD-Qo-t1E">
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </barButtonItem>
+                                    <barButtonItem enabled="NO" title="Copy" id="9bc-cg-WgT">
+                                        <connections>
+                                            <action selector="clickedCopy:" destination="BYZ-38-t0r" id="WdI-Vm-ZYf"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jy5-fE-q1W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1bJ-B5-0xW"/>
-                            <constraint firstAttribute="trailing" secondItem="4fb-2L-PVT" secondAttribute="trailing" id="4MJ-oP-7aj"/>
+                            <constraint firstItem="Ck6-Kw-XuD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6oF-on-fWW"/>
                             <constraint firstAttribute="trailing" secondItem="8Eo-JB-Y3n" secondAttribute="trailing" id="A89-fA-mtV"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ck6-Kw-XuD" secondAttribute="bottom" id="B4z-VY-Iki"/>
+                            <constraint firstItem="4fb-2L-PVT" firstAttribute="top" secondItem="8Eo-JB-Y3n" secondAttribute="bottom" id="E0U-wa-PEQ"/>
+                            <constraint firstItem="Ck6-Kw-XuD" firstAttribute="top" secondItem="4fb-2L-PVT" secondAttribute="bottom" id="GCr-66-tfa"/>
                             <constraint firstItem="8Eo-JB-Y3n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="N8r-6t-01w"/>
-                            <constraint firstItem="jy5-fE-q1W" firstAttribute="top" secondItem="4fb-2L-PVT" secondAttribute="bottom" id="VWG-Xo-TaP"/>
-                            <constraint firstItem="4fb-2L-PVT" firstAttribute="top" secondItem="8Eo-JB-Y3n" secondAttribute="bottom" id="fnQ-RF-YJj"/>
-                            <constraint firstItem="4fb-2L-PVT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hnq-21-UKM"/>
+                            <constraint firstItem="4fb-2L-PVT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="S9d-Qm-FRO"/>
+                            <constraint firstAttribute="trailing" secondItem="4fb-2L-PVT" secondAttribute="trailing" id="aQp-jU-b2W"/>
+                            <constraint firstAttribute="trailing" secondItem="Ck6-Kw-XuD" secondAttribute="trailing" id="mFA-Ru-U5j"/>
                             <constraint firstItem="8Eo-JB-Y3n" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="o65-rn-bNI"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jy5-fE-q1W" secondAttribute="bottom" id="sDJ-dL-0Hi"/>
-                            <constraint firstAttribute="trailing" secondItem="jy5-fE-q1W" secondAttribute="trailing" id="tp0-m6-U8C"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
-                        <outlet property="shortURLField" destination="pQK-2u-Zpa" id="T9K-J6-5if"/>
+                        <outlet property="cpyBtn" destination="9bc-cg-WgT" id="X65-Sy-X0C"/>
+                        <outlet property="shortBtn" destination="d1e-2u-hfG" id="elW-1n-eTj"/>
                         <outlet property="urlField" destination="6FX-6J-9D1" id="26N-z7-65Q"/>
                         <outlet property="webView" destination="4fb-2L-PVT" id="hHf-JM-VlA"/>
                     </connections>
