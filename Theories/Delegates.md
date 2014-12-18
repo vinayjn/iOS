@@ -36,7 +36,7 @@ Looking up the `UIWebViewDelegate` protocol, you find that it lists four methods
     	self.shortenButton.enabled = NO;
 	} 
 
-**Step 3 :** Connect the delegate outlet of the object to your delegate object.
+**Step 3 :** Connect the delegate outlet of the object to your delegate object. For this example the delegate is the ViewController object.
 
 	webViewObj.delegate = self;
 
