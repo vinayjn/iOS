@@ -414,6 +414,7 @@
 				018F21D31A41A4F200204C3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		018F21D41A41A4F200204C3A /* Build configuration list for PBXNativeTarget "URLShorteningTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +423,7 @@
 				018F21D61A41A4F200204C3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
