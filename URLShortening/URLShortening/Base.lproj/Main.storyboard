@@ -56,9 +56,11 @@
                                             <action selector="clickedShort:" destination="BYZ-38-t0r" id="utn-Qv-boV"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kux-hh-bQn"/>
                                     <barButtonItem title="Tap Arrow Button To Shorten" id="1uD-Qo-t1E">
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Y2M-bP-LFC"/>
                                     <barButtonItem enabled="NO" title="Copy" id="9bc-cg-WgT">
                                         <connections>
                                             <action selector="clickedCopy:" destination="BYZ-38-t0r" id="WdI-Vm-ZYf"/>
