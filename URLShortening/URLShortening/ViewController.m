@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *shortBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cpyBtn;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *shortUrlField;
 
 @end
 
@@ -57,7 +58,7 @@
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
     session = [NSURLSession sessionWithConfiguration:config delegate:nil delegateQueue:nil];
     
-    NSString *requestString = [NSString stringWithFormat:@"https://www.googleapis.com/urlshortener/v1/url?key={API-KEY}"];
+    NSString *requestString = [NSString stringWithFormat:@"https://www.googleapis.com/urlshortener/v1/url?key={API KEY}"];
     NSURL *requestURL = [NSURL URLWithString:requestString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
     
@@ -70,13 +71,20 @@
                              };
     request.HTTPBody = [NSJSONSerialization dataWithJSONObject:params options:NSJSONWritingPrettyPrinted error:nil];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSString *json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@",json);
+        NSDictionary *param = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+        [_shortUrlField setTitle:[param valueForKey:@"id"]] ;
+        _shortBtn.enabled = NO;
+        _cpyBtn.enabled = YES;
     }];
+    
     [dataTask resume];
     
 }
 - (IBAction)clickedCopy:(id)sender {
+    
+    NSString *shortURLString = _shortUrlField.title;
+    NSURL *shortURL = [NSURL URLWithString:shortURLString];
+    [[UIPasteboard generalPasteboard] setURL:shortURL];
 }
 
 #pragma mark UIWebView Delegate methods
@@ -84,6 +92,7 @@
 -(void)webViewDidStartLoad:(UIWebView *)webView{
     
     _shortBtn.enabled = NO;
+    _cpyBtn.enabled = NO;
     [indicator startAnimating];
 }
 
