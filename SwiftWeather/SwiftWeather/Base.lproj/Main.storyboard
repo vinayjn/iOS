@@ -23,42 +23,81 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xh9-Cr-nxs" userLabel="TextContainer">
                                 <rect key="frame" x="0.0" y="237" width="600" height="363"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k00-As-rBx">
-                                        <rect key="frame" x="73" y="58" width="454" height="295"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="k00-As-rBx">
+                                        <rect key="frame" x="0.0" y="58" width="600" height="295"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="250"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
+                                        </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cupertino" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDc-o5-wGX">
-                                        <rect key="frame" x="-7" y="10" width="614" height="177"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cupertino" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lDc-o5-wGX">
+                                        <rect key="frame" x="0.0" y="10" width="600" height="177"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="150"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact">
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="90"/>
+                                        </variation>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.21568627450980393" green="0.50196078431372548" blue="0.72941176470588232" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="lDc-o5-wGX" firstAttribute="width" secondItem="xh9-Cr-nxs" secondAttribute="width" id="9CW-YW-Edd"/>
                                     <constraint firstAttribute="centerX" secondItem="k00-As-rBx" secondAttribute="centerX" id="XA6-Ur-oEe"/>
                                     <constraint firstAttribute="centerX" secondItem="lDc-o5-wGX" secondAttribute="centerX" id="gYO-wp-s84"/>
                                     <constraint firstAttribute="bottom" secondItem="k00-As-rBx" secondAttribute="bottom" constant="10" id="prw-JC-qcf"/>
+                                    <constraint firstItem="k00-As-rBx" firstAttribute="width" secondItem="xh9-Cr-nxs" secondAttribute="width" id="srj-s8-ZNw"/>
                                     <constraint firstItem="lDc-o5-wGX" firstAttribute="top" secondItem="xh9-Cr-nxs" secondAttribute="top" constant="10" id="wBj-Xu-wjF"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.29019607843137252" green="0.6705882352941176" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="xh9-Cr-nxs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="180" id="2Dy-rS-fUG">
+                                <variation key="heightClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="ekk-n2-WVC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" id="CLS-J9-2GP"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xh9-Cr-nxs" secondAttribute="bottom" id="NM8-UY-XbT"/>
                             <constraint firstItem="xh9-Cr-nxs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UOv-pP-fRf"/>
                             <constraint firstItem="ekk-n2-WVC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bwG-rZ-Ejv"/>
                             <constraint firstItem="xh9-Cr-nxs" firstAttribute="top" secondItem="ekk-n2-WVC" secondAttribute="bottom" constant="20" id="n3c-Vb-ua6"/>
+                            <constraint firstItem="ekk-n2-WVC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="rLO-ji-nGT"/>
                             <constraint firstAttribute="trailing" secondItem="xh9-Cr-nxs" secondAttribute="trailing" id="t1j-9t-aKK"/>
+                            <constraint firstItem="xh9-Cr-nxs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="tJz-X7-0l1"/>
                             <constraint firstItem="ekk-n2-WVC" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="u6l-fy-bew"/>
                             <constraint firstAttribute="centerX" secondItem="ekk-n2-WVC" secondAttribute="centerX" id="xLn-Df-bvC"/>
+                            <constraint firstAttribute="centerY" secondItem="ekk-n2-WVC" secondAttribute="centerY" id="zuh-zU-KFQ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CLS-J9-2GP"/>
+                                <exclude reference="rLO-ji-nGT"/>
+                                <exclude reference="zuh-zU-KFQ"/>
+                                <exclude reference="2Dy-rS-fUG"/>
+                                <exclude reference="tJz-X7-0l1"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="CLS-J9-2GP"/>
+                                <exclude reference="bwG-rZ-Ejv"/>
+                                <include reference="rLO-ji-nGT"/>
+                                <exclude reference="u6l-fy-bew"/>
+                                <exclude reference="xLn-Df-bvC"/>
+                                <include reference="zuh-zU-KFQ"/>
+                                <include reference="2Dy-rS-fUG"/>
+                                <exclude reference="UOv-pP-fRf"/>
+                                <exclude reference="n3c-Vb-ua6"/>
+                                <include reference="tJz-X7-0l1"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="375" y="322.5"/>
         </scene>
     </scenes>
     <resources>
