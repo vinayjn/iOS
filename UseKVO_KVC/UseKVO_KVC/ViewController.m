@@ -94,6 +94,15 @@ static void *child2Context = &child2Context;
     }
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
+    
+    
+    [self.child1 removeObserver:self forKeyPath:@"name"];
+    [self.child1 removeObserver:self forKeyPath:@"age"];
+    [self.child2 removeObserver:self forKeyPath:@"name"];
+    [self.child2 removeObserver:self forKeyPath:@"age"];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
