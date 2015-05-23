@@ -40,6 +40,8 @@
 		A15C3C151B103F2300A9CC71 /* LocalizationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalizationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A15C3C1A1B103F2300A9CC71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A15C3C1B1B103F2300A9CC71 /* LocalizationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocalizationTests.m; sourceTree = "<group>"; };
+		A15C3C2D1B1041B300A9CC71 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		A15C3C2E1B1041B300A9CC71 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +250,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A15C3C0A1B103F2300A9CC71 /* Base */,
+				A15C3C2D1B1041B300A9CC71 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A15C3C0F1B103F2300A9CC71 /* Base */,
+				A15C3C2E1B1041B300A9CC71 /* de */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -416,6 +420,7 @@
 				A15C3C211B103F2300A9CC71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A15C3C221B103F2300A9CC71 /* Build configuration list for PBXNativeTarget "LocalizationTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +429,7 @@
 				A15C3C241B103F2300A9CC71 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
