@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "First Name"; ObjectID = "FiR-Va-yAZ"; */
+"FiR-Va-yAZ.text" = "Vorname";
+
+/* Class = "UILabel"; text = "Gender"; ObjectID = "Fma-0E-MZp"; */
+"Fma-0E-MZp.text" = "Geschlecht";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "Hb6-A5-793"; */
+"Hb6-A5-793.text" = "City";
+
+/* Class = "UILabel"; text = "Age"; ObjectID = "b5k-Pm-3dK"; */
+"b5k-Pm-3dK.text" = "Alter";
+
+/* Class = "UILabel"; text = "Last Name"; ObjectID = "cD6-cq-ePn"; */
+"cD6-cq-ePn.text" = "Nachname";
