@@ -21,7 +21,7 @@
     if (self) {
         // by default imageView doesnot supports user interations
         self.userInteractionEnabled = YES;
-        
+        self.clipsToBounds = YES;
     }
     
     return self;
@@ -31,10 +31,12 @@
     
     startLocation = [[touches anyObject] locationInView:self];
     [self.superview bringSubviewToFront:self];
-    
+    self.layer.borderColor = [UIColor greenColor].CGColor;
+    self.layer.borderWidth = 3.0f;
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    
     
     CGPoint currentLocation = [[touches anyObject] locationInView:self];
     
@@ -42,7 +44,30 @@
     CGFloat dx = currentLocation.x - startLocation.x;
     CGFloat dy = currentLocation.y - startLocation.y;
     
+    
     //add the offset to current center of the view
     self.center = CGPointMake(self.center.x + dx, self.center.y + dy);
+    
 }
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    self.layer.borderWidth = 0.0f;
+    UIView *redView = [self.superview viewWithTag:1];
+    UIView *greenView = [self.superview viewWithTag:2];
+    
+    if (CGRectContainsPoint(redView.frame, self.frame.origin)) {
+        
+        [redView addSubview:self];
+        [redView bringSubviewToFront:self];
+        self.center = redView.center;
+    }
+    else if (CGRectContainsPoint(greenView.frame, self.frame.origin)) {
+        [greenView addSubview:self];
+        
+        [greenView bringSubviewToFront:self];
+        self.center = greenView.center;
+    }
+}
+
 @end

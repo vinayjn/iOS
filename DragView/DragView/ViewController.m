@@ -23,7 +23,7 @@
     CGFloat maxX = CGRectGetMaxX(self.view.frame);
     CGFloat maxY = CGRectGetMaxY(self.view.frame);
     
-    for (int i =0; i<10; i++) {
+    for (int i =0; i<2; i++) {
         DragView *dragImage = [[DragView alloc] initWithImage:[UIImage imageNamed:@"home"]];
         [self.view addSubview:dragImage];
         CGPoint center = CGPointMake(arc4random() % (int)maxX, arc4random() % (int)maxY);
