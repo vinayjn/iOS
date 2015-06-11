@@ -15,6 +15,7 @@
 		A1998D961B0285B500A32517 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1998D941B0285B500A32517 /* LaunchScreen.xib */; };
 		A1998DA21B0285B500A32517 /* DragViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1998DA11B0285B500A32517 /* DragViewTests.m */; };
 		A1998DB11B02865900A32517 /* DragView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1998DB01B02865900A32517 /* DragView.m */; };
+		AC6D3C821B29610000AB5899 /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6D3C811B29610000AB5899 /* DrawView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		A1998DA11B0285B500A32517 /* DragViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DragViewTests.m; sourceTree = "<group>"; };
 		A1998DAF1B02865900A32517 /* DragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragView.h; sourceTree = "<group>"; };
 		A1998DB01B02865900A32517 /* DragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragView.m; sourceTree = "<group>"; };
+		AC6D3C801B29610000AB5899 /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		AC6D3C811B29610000AB5899 /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				A1998D891B0285B500A32517 /* AppDelegate.h */,
 				A1998D8A1B0285B500A32517 /* AppDelegate.m */,
 				A1998D8C1B0285B500A32517 /* ViewController.h */,
+				AC6D3C801B29610000AB5899 /* DrawView.h */,
+				AC6D3C811B29610000AB5899 /* DrawView.m */,
 				A1998D8D1B0285B500A32517 /* ViewController.m */,
 				A1998D8F1B0285B500A32517 /* Main.storyboard */,
 				A1998D921B0285B500A32517 /* Images.xcassets */,
@@ -236,6 +241,7 @@
 				A1998D8B1B0285B500A32517 /* AppDelegate.m in Sources */,
 				A1998DB11B02865900A32517 /* DragView.m in Sources */,
 				A1998D881B0285B500A32517 /* main.m in Sources */,
+				AC6D3C821B29610000AB5899 /* DrawView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +438,7 @@
 				A1998DA71B0285B500A32517 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A1998DA81B0285B500A32517 /* Build configuration list for PBXNativeTarget "DragViewTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +447,7 @@
 				A1998DAA1B0285B500A32517 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
