@@ -416,6 +416,7 @@
 				ACB72DE61B1F2BA6003B3BAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACB72DE71B1F2BA6003B3BAB /* Build configuration list for PBXNativeTarget "PullToRefreshTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +425,7 @@
 				ACB72DE91B1F2BA6003B3BAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
