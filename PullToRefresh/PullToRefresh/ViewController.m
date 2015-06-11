@@ -16,6 +16,19 @@
 
 @implementation ViewController
 
+-(void)viewDidLoad{
+    self.navigationController.navigationBar.barTintColor = [UIColor purpleColor];
+    
+    NSDictionary *attributes = @{
+                                 NSForegroundColorAttributeName : [UIColor whiteColor]
+                                 };
+    
+    self.navigationController.navigationBar.titleTextAttributes = attributes;
+    self.refreshControl.tintColor = [UIColor whiteColor];
+    self.refreshControl.backgroundColor = [UIColor purpleColor];
+}
+
+
 #pragma mark -TableView Methods
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -90,7 +103,15 @@
     
     [self.tableView reloadData];
     
+    if (self.refreshControl) {
+        self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing" attributes:@{
+                                                                                                                    NSForegroundColorAttributeName : [UIColor whiteColor]
+                                                                                                                    }];
+    }
+    
     [self.refreshControl endRefreshing];
 }
+
+
 
 @end
